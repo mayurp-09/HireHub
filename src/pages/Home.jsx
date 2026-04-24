@@ -20,7 +20,7 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <div className="bg-white border-b">
-         <div className="max-w-4xl mx-auto text-center min-h-[90vh] flex flex-col justify-center px-4">
+         <div className="max-w-4xl mx-auto text-center min-h-[65vh] flex flex-col justify-center px-4">
           <h1 className="text-5xl font-bold text-blue-600">
             HireHub
           </h1>
@@ -39,21 +39,21 @@ const Home = () => {
 
 
           {/* Search Bar */}
-          <form
+         <form
             onSubmit={handleSearch}
-            className="mt-8 flex items-center bg-white border rounded-lg shadow-sm overflow-hidden"
+            className="mt-8 flex items-center bg-white border shadow-md rounded-full overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
           >
+            <span className="pl-5 text-gray-400">🔍</span> 
             <input
               type="text"
               placeholder="Search jobs (e.g. Frontend, React...)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-1 px-4 py-3 outline-none"
+              className="flex-1 px-4 py-4 outline-none text-gray-700"
             />
-
             <button
               type="submit"
-              className="bg-blue-600 text-white px-6 py-3 hover:bg-blue-700"
+              className="bg-blue-600 text-white px-8 py-4 font-bold hover:bg-blue-700 transition"
             >
               Search
             </button>

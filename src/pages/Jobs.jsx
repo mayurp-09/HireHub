@@ -75,7 +75,17 @@ const Jobs = () => {
       </h1>
 
       {filteredJobs.length === 0 ? (
-        <p className="text-gray-600">No jobs found</p>
+        <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
+          <div className="text-5xl mb-4">📂</div>
+          <h3 className="text-xl font-bold text-gray-800">No jobs found</h3>
+          <p className="text-gray-500">Try changing your search keywords or filters.</p>
+          <button 
+            onClick={() => {setSearchTerm(""); setSelectedLocation(""); setSelectedType("");}}
+            className="mt-4 text-blue-600 font-bold hover:underline"
+          >
+            Clear all filters
+          </button>
+        </div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredJobs.map((job) => (
