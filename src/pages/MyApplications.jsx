@@ -11,8 +11,7 @@ const MyApplications = () => {
         <p className="text-gray-600 mb-8 font-medium">
             You have sent {applications.length} applications.
         </p>
-        
-        {/* Changed to a 1-column list for horizontal cards */}
+{/* Changed to a 1-column list for horizontal cards */}
         {applications.length > 0 ? (
           <div className="flex flex-col gap-4">
             {applications.map((job) => (

@@ -6,6 +6,7 @@ import Jobs from "./pages/Jobs";
 import Login from "./pages/Login";
 import JobDetails from "./pages/JobDetails";
 import MyApplications from "./pages/MyApplications";
+import SavedJobs from "./pages/SavedJobs";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/jobs/:id" element={<JobDetails />} />
         <Route path="/my-applications" element={<MyApplications />} />
+        <Route path="/saved-jobs" element={<SavedJobs />} />
       </Route>
 
       {/* Auth Layout (No Header/Footer) */}

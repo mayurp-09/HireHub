@@ -9,7 +9,6 @@ const Home = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-
     if (search.trim() !== "") {
       navigate(`/jobs?search=${search}`);
     }
@@ -17,8 +16,7 @@ const Home = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-
-      {/* HERO SECTION */}
+{/* HERO SECTION */}
       <div className="bg-white border-b">
          <div className="max-w-4xl mx-auto text-center min-h-[65vh] flex flex-col justify-center px-4">
           <h1 className="text-5xl font-bold text-blue-600">
@@ -32,80 +30,60 @@ const Home = () => {
             <span><b>500+</b> Companies</span>
             <span><b>2K+</b> Candidates</span>
           </div>
-
           <p className="mt-4 text-gray-600 text-lg">
             Explore thousands of job opportunities with HireHub
           </p>
-
-
-          {/* Search Bar */}
+{/* Search Bar */}
          <form
             onSubmit={handleSearch}
-            className="mt-8 flex items-center bg-white border shadow-md rounded-full overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
-          >
+            className="mt-8 flex items-center bg-white border shadow-md rounded-full overflow-hidden focus-within:ring-2 focus-within:ring-blue-500">
             <span className="pl-5 text-gray-400">🔍</span> 
             <input
               type="text"
               placeholder="Search jobs (e.g. Frontend, React...)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-1 px-4 py-4 outline-none text-gray-700"
-            />
+              className="flex-1 px-4 py-4 outline-none text-gray-700"/>
             <button
               type="submit"
-              className="bg-blue-600 text-white px-8 py-4 font-bold hover:bg-blue-700 transition"
-            >
-              Search
-            </button>
+              className="bg-blue-600 text-white px-8 py-4 font-bold hover:bg-blue-700 transition">
+              Search</button>
           </form>
           <div className="mt-6 text-sm text-gray-500">
             Popular: 
             <span
               onClick={() => navigate("/jobs?search=Frontend")}
-              className="ml-2 text-blue-600 cursor-pointer hover:underline"
-            >
-              Frontend
-            </span>
+              className="ml-2 text-blue-600 cursor-pointer hover:underline">
+              Frontend</span>
             <span
               onClick={() => navigate("/jobs?search=Backend")}
-              className="ml-3 text-blue-600 cursor-pointer hover:underline"
-            >
+              className="ml-3 text-blue-600 cursor-pointer hover:underline">
               Backend
             </span>
             <span
-              onClick={() => navigate("/jobs?search=React")}
-              className="ml-3 text-blue-600 cursor-pointer hover:underline"
-            >
-              React
-            </span>
+              onClick={() => navigate("/jobs?search=Data Scientist")}
+              className="ml-3 text-blue-600 cursor-pointer hover:underline">
+              Data Science</span>
           </div>
         </div>
       </div>
-      
-      {/* FEATURED JOBS */}
+{/* FEATURED JOBS */}
       <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-16">
-
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-semibold text-gray-800">
             Featured Jobs
           </h2>
-
           <button
             onClick={() => navigate("/jobs")}
-            className="text-blue-600 hover:underline text-sm font-medium"
-          >
-            View all jobs →
-          </button>
+            className="text-blue-600 hover:underline text-sm font-medium">
+            View all jobs →</button>
         </div>
-
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {jobs.slice(0, 3).map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
         </div>
-
       </div>
-
     </div>
   );
 };
