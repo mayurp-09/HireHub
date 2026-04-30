@@ -20,7 +20,7 @@ const JobCard = ({ job }) => {
 {/* Logo */}
           {job.logo ? (
             <img
-              src={job.logo}
+              src={`${import.meta.env.BASE_URL}${job.logo}`}
               alt={job.company}
               className="w-11 h-11 rounded-full object-cover border"/>
           ) : (

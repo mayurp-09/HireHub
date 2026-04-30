@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     localStorage.removeItem("jobPortalUser")
     localStorage.removeItem("userApplications")
-    localStorage.removeItems("savedJobs")
+    localStorage.removeItem("savedJobs")
   };
 
   return (
